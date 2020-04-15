@@ -40,4 +40,4 @@ for data_type in data_types:
       
       print(store.shape)
 
-  np.save("{}size_{}_test_total.npy".format(root_path, image_size), store)
+  np.save("{}size_{}_{}_total.npy".format(root_path, image_size, data_type), store)
