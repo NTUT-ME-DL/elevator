@@ -16,11 +16,14 @@ for data_type in data_types:
           orig_image = cv2.imread(file_path)
           image = cv2.cvtColor(orig_image, cv2.COLOR_BGR2HSV)
 
-          image[..., 1] -= 20
-          image[image[..., 1] >= 235] = 0
+          image[..., 1] -= 35
+          image[image[..., 1] >= 220] = 0
 
-          image[..., 2] -= 110
-          image[image[..., 2] >= 145] = 0
+          image[..., 2] -= 130
+          image[image[..., 2] >= 105] = 0
+
+          image[..., 1] += 1
+          image[image[..., 2] <= 1] = 255
 
           image = cv2.cvtColor(image, cv2.COLOR_HSV2BGR)
           image = cv2.cvtColor(image, cv2.COLOR_RGB2GRAY)
