@@ -10,7 +10,7 @@ def file_rename(root_path, additional_file_name):
         floor_path = "{}{}/{}f/".format(root_path, data_type, floor)
         file_names = os.listdir(floor_path)
         
-        for count in len(file_names):
+        for count in range(len(file_names)):
           old_name = file_names[count]
           new_name = "{}{}.png".format(count, additional_file_name)
         
