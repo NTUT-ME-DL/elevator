@@ -1,3 +1,5 @@
+import numpy as np
+
 def normalize_image(image):
     image = image / 255.
     image -= 0.5

@@ -1,3 +1,5 @@
+import os
+
 def get_label_count(root_path):
     label_count = {}
     for floor in range(11):
